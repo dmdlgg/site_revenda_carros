@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 0;
+  }
+
+  .form-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #333;
+  }
+
+  table {
+    width: 100%;
+    border-spacing: 0 10px;
+  }
+
+  td {
+    padding: 10px 5px;
+    vertical-align: top;
+  }
+
+  td label {
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  input[type="text"],
+  input[type="file"],
+  input[type="number"],
+  input[type="email"],
+  input[type="password"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+
+  input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+</style>
+
+<div class="form-container">
+  <h2>Cadastro de Veículo</h2>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <table>
+      {{ form.as_table }}
+    </table>
+    <input type="submit" value="Cadastrar">
+  </form>
+</div>
+{% endblock %}

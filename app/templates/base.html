@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}{% endblock %}</title>
+  <style>
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+    }
+
+    header {
+      background-color: #0096c7;
+      padding: 10px 0;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-size: 16px;
+      padding: 12px 18px;
+      border-radius: 6px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: #32bbe8;
+    }
+
+    nav ul li.active a {
+      background-color: #025e82;
+    }
+
+    nav ul li.active a:hover {
+      background-color: #0386b0;
+    }
+
+    main {
+      flex: 1;
+      max-width: 900px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background-color: #fff;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border-radius: 10px;
+    }
+
+    footer {
+      background-color: #e0e0e0;
+      color: #444;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+      }
+
+      main {
+        margin: 0 10px;
+        padding: 20px 15px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+
+        {% if user.is_authenticated %}
+          <li><a href="{% url 'logout' %}">Sair</a></li>
+          <li><a href="{% url 'new_car' %}">Cadastrar Carro</a></li>
+        {% endif %}
+        
+        {% if not user.is_authenticated %}
+          <li><a href="{% url 'register' %}">Cadastre-se</a></li>
+          <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
+        
+        <li><a href="{% url 'cars_list' %}">Carros</a></li>
+      </ul>
+    </nav>
+
+  </header>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Eduardo Medolago</p>
+  </footer>
+</body>
+</html>
