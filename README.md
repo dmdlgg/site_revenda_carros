@@ -1,9 +1,8 @@
 # 🚗 Site de Revenda de Carros
+---
 
-Preview:
-![](assets\img\{0BEBFC61-A7B5-4120-AF74-FEE7F59C7B66}.png)
-
-
+## 📸 Prévia do Projeto
+![](assets/img/preview.png)
 
 ---
 
