@@ -36,6 +36,8 @@ O projeto também conta com **upload de imagens dos veículos**, banco de dados 
 - 🌐 **HTML5** – Estrutura das páginas e marcação de conteúdo.
 - 🎨 **CSS3** – Estilização visual e responsividade.
 - 🔔 **Django Signals** – Gatilhos automáticos usados para eventos internos do sistema (como notificações ou logs).
+- 📦 Bootstrap – Framework CSS para design responsivo e componentes prontos.
+- 🌬️ Tailwind CSS – Framework utilitário para estilização rápida e personalizada.
 
 
 ---
@@ -72,7 +74,6 @@ python manage.py runserver
 ---
 ## 🔮 Futuras Melhorias
 
-- 📱 Layout mais responsivo e moderno com frameworks frontend, como Tailwind e Bootstrap.
 - 📦 Integração com APIs externas para dados de veículos (ex: tabela FIPE)
 
 ---
