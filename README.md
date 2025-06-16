@@ -18,8 +18,7 @@ O projeto também conta com **upload de imagens dos veículos**, banco de dados 
 
 ## ✨ Funcionalidades
 
-- 🔐 **Autenticação**: cadastro, login e logout de usuários  
-- 🔍 **Pesquisa avançada**: filtro por marca, modelo, ano, preço, etc  
+- 🔐 **Autenticação**: cadastro, login e logout de usuários    
 - 🛠️ **CRUD de carros**: adicionar, editar e excluir anúncios pelo site  
 - 🧑‍💼 **Admin Django**: gerenciamento completo via painel administrativo  
 - 💾 **Banco de dados SQL** (SQLite por padrão, configurável)  
