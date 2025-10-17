@@ -23,7 +23,6 @@ O projeto também conta com **upload de imagens dos veículos**, banco de dados 
 - 🧑‍💼 **Admin Django**: gerenciamento completo via painel administrativo  
 - 💾 **Banco de dados SQL** (SQLite por padrão, configurável)  
 - ⚡ **Django Signals**: eventos automáticos (ex: notificações, atualizações)  
-- 🎨 Interface responsiva em HTML/CSS simples e funcional
 
 ---
 
@@ -36,8 +35,6 @@ O projeto também conta com **upload de imagens dos veículos**, banco de dados 
 - 🎨 **CSS3** – Estilização visual e responsividade.
 - 🔔 **Django Signals** – Gatilhos automáticos usados para eventos internos do sistema (como notificações ou logs).
 - 📦 Bootstrap – Framework CSS para design responsivo e componentes prontos.
-- 🌬️ Tailwind CSS – Framework utilitário para estilização rápida e personalizada.
-
 
 ---
 
@@ -71,9 +68,6 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 ---
-## 🔮 Futuras Melhorias
-
-- 📦 Integração com APIs externas para dados de veículos (ex: tabela FIPE)
 
 ---
 
